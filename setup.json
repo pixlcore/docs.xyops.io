@@ -1,0 +1,68 @@
+{	
+	"build": {
+		"common": [
+			[ "symlinkCompress", "node_modules/@highlightjs/cdn-assets/highlight.min.js", "htdocs/js/external/" ],
+			[ "symlinkCompress", "node_modules/@highlightjs/cdn-assets/languages/http.min.js", "htdocs/js/external/" ],
+			[ "symlinkCompress", "node_modules/@highlightjs/cdn-assets/styles/atom-one-light.css", "htdocs/css/" ],
+			[ "symlinkCompress", "node_modules/@highlightjs/cdn-assets/styles/atom-one-dark.css", "htdocs/css/" ],
+			
+			[ "symlinkCompress", "node_modules/jquery/dist/jquery.min.js", "htdocs/js/external/" ],
+			[ "symlinkCompress", "node_modules/jquery/dist/jquery.min.map", "htdocs/js/external/" ],
+			
+			[ "symlinkCompress", "node_modules/@mdi/font/css/materialdesignicons.min.css", "htdocs/css/" ],
+			[ "symlinkCompress", "node_modules/@mdi/font/css/materialdesignicons.min.css.map", "htdocs/css/" ],
+			[ "symlinkCompress", "node_modules/@mdi/font/css/materialdesignicons.css.map", "htdocs/css/" ],
+			[ "copyFiles", "node_modules/@mdi/font/fonts/*", "htdocs/fonts/" ],
+			
+			[ "symlinkCompress", "node_modules/marked/marked.min.js", "htdocs/js/external/" ],
+			
+			[ "symlinkFile", "node_modules/pixl-xyapp/js", "htdocs/js/common" ],
+			[ "symlinkFile", "node_modules/pixl-xyapp/css/normalize.css", "htdocs/css/" ],
+			[ "symlinkFile", "node_modules/pixl-xyapp/css/base.css", "htdocs/css/" ],
+			
+			[ "chmodFiles", "755", "bin/*" ],
+			
+			[ "prepIconFont", "htdocs/js/external/icon-font-names.js" ],
+			[ "compressFile", "htdocs/js/external/icon-font-names.js", "htdocs/js/external/icon-font-names.js.gz" ]
+		],
+		"dev": [
+			[ "deleteFiles", "htdocs/css/_combo*" ],
+			[ "deleteFiles", "htdocs/js/_combo*" ],
+			[ "deleteFile", "htdocs/index.html" ],
+			[ "deleteFile", "htdocs/index.html.gz" ],
+			[ "symlinkFile", "htdocs/index-dev.html", "htdocs/index.html" ],
+			[ "symlinkFile", "../../xyops/docs", "docs" ]
+		],
+		"dist": [
+			[ "deleteFile", "docs" ],
+			[ "deleteFile", "htdocs/index.html" ],
+			[ "shellExec", "tmp=\"$(mktemp -d)\" && curl -fsSL \"https://codeload.github.com/pixlcore/xyops/tar.gz/refs/heads/main\" | tar -xz -C \"$tmp\" && mv \"$tmp\"/*/docs ./docs && rm -rf \"$tmp\"" ],
+			{
+				"action": "bundleCompress",
+				"strip_source_maps": true,
+				"dest_bundle": "htdocs/css/_combo.css",
+				"src_html_file": "htdocs/index-dev.html",
+				"dest_html_file": "htdocs/index.html",
+				"match_key": "COMBINE_STYLE",
+				"dest_bundle_tag": "<link rel=\"stylesheet\" href=\"/css/_combo.css?v=[version]\">"
+			},
+			{
+				"action": "bundleCompress",
+				"uglify": false,
+				"header": "/* Copyright (c) PixlCore.com. */",
+				"dest_bundle": "htdocs/js/_combo.js",
+				"src_html_file": "htdocs/index.html",
+				"dest_html_file": "htdocs/index.html",
+				"match_key": "COMBINE_SCRIPT",
+				"dest_bundle_tag": "<script src=\"/js/_combo.js?v=[version]\"></script>"
+			},
+			{
+				"action": "printMessage",
+				"lines": [
+					"Welcome to xyDocs!",
+					"Enjoy!"
+				]
+			}
+		]
+	}
+}

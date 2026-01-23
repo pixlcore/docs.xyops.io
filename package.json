@@ -1,0 +1,65 @@
+{
+	"name": "docs.xyops.io",
+	"private": true,
+	"version": "1.0.0",
+	"description": "The xyOps Documentation Website.",
+	"author": "Joseph Huckaby <jhuckaby@pixlcore.com>",
+	"homepage": "https://github.com/pixlcore/docs.xyops.io",
+	"license": "BSD-3-Clause",
+	"scripts": {
+		"install": "node bin/build.js dist"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/pixlcore/docs.xyops.io"
+	},
+	"bugs": {
+		"url": "https://github.com/pixlcore/docs.xyops.io/issues"
+	},
+	"keywords": [
+		"pixlcore",
+		"xyops",
+		"docs"
+	],
+	"dependencies": {
+		"@highlightjs/cdn-assets": "11.10.0",
+		"@mdi/font": "7.4.47",
+		"@mdi/svg": "7.4.47",
+		"async": "2.6.4",
+		"class-plus": "^2.0.0",
+		"jquery": "3.6.0",
+		"marked": "4.3.0",
+		"mime": "2.5.2",
+		"pixl-cli": "^1.0.11",
+		"pixl-tools": "^1.0.24",
+		"pixl-xyapp": "^2.1.0",
+		"uglify-js": "3.13.5"
+	},
+	
+	"pool": "default",
+	"acl": false,
+	"headers": {
+		"host": "^(docs\\.)(local\\.)?(xyops\\.io)(\\:\\d+)?$"
+	},
+	"routes": [
+		{
+			"type": "script",
+			"uri_match": "^/api",
+			"path": "lib/api.js",
+			"max_requests_per_sec": 200,
+			"max_concurrent_requests": 16,
+			"rate_limit_headers": true
+		},
+		{
+			"type": "redirect",
+			"uri_match": "^/([\\w\\-\\/]+)$",
+			"location": "/#Docs/$1"
+		},
+		{
+			"type": "static",
+			"uri_match": "^/",
+			"path": "htdocs",
+			"ttl": 3600
+		}
+	]
+}

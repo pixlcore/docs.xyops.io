@@ -1,0 +1,152 @@
+{
+	"name": "xyDocs",
+	
+	"ttl": 3600,
+	
+	"marked": {
+		"gfm": true,
+		"tables": true,
+		"breaks": false,
+		"pedantic": false,
+		"sanitize": false,
+		"smartLists": true,
+		"smartypants": false,
+		"silent": true,
+		"headerIds": true,
+		"mangle": false
+	},
+	
+	"Page": [ { "ID": "Docs" } ],
+	"DefaultPage": "Docs",
+	
+	"list_list": [
+		{ "id": "alerts", "title": "Alerts", "icon": "bell-outline" },
+		{ "id": "api_keys", "title": "API Keys", "icon": "key-chain" },
+		{ "id": "buckets", "title": "Buckets", "icon": "pail-outline" },
+		{ "id": "categories", "title": "Categories", "icon": "folder-open-outline" },
+		{ "id": "channels", "title": "Channels", "icon": "bullhorn-outline" },
+		{ "id": "events", "title": "Events", "icon": "calendar-clock" },
+		{ "id": "groups", "title": "Groups", "icon": "server-network" },
+		{ "id": "monitors", "title": "Monitors", "icon": "chart-areaspline" },
+		{ "id": "plugins", "title": "Plugins", "icon": "power-plug-outline" },
+		{ "id": "secrets", "title": "Secrets", "icon": "shield-lock-outline" },
+		{ "id": "tags", "title": "Tags", "icon": "tag-outline" },
+		{ "id": "users", "title": "Users", "icon": "account" },
+		{ "id": "roles", "title": "Roles", "icon": "account-group" },
+		{ "id": "web_hooks", "title": "Web Hooks", "icon": "webhook" }
+	],
+	
+	"database_list": [
+		{ "id": "alerts", "title": "Alerts", "icon": "bell-outline" },
+		{ "id": "jobs", "title": "Jobs", "icon": "timer-outline" },
+		{ "id": "servers", "title": "Servers", "icon": "router-network" },
+		{ "id": "snapshots", "title": "Snapshots", "icon": "monitor-screenshot" },
+		{ "id": "activity", "title": "Activity", "icon": "script-text-outline" },
+		{ "id": "tickets", "title": "Tickets", "icon": "text-box-outline" }
+	],
+	
+	"sections": [
+		{
+			"title": "Getting Started",
+			"icon": "rocket-launch",
+			"chapters": [
+				{ "id": "welcome", "title": "Welcome!", "icon": "hand-wave" },
+				{ "id": "hosting", "title": "Self-Hosting", "icon": "server-network" },
+				{ "id": "config", "title": "Configuration", "icon": "cog" },
+				{ "id": "scaling", "title": "Scaling", "icon": "chart-line" },
+				{ "id": "cli", "title": "Command Line", "icon": "console" },
+				{ "id": "cronicle", "title": "Cronicle", "icon": "progress-clock" },
+				{ "id": "recipes", "title": "Recipes", "icon": "chef-hat" }
+			]
+		},
+		{
+			"title": "Core Concepts",
+			"icon": "cube-outline",
+			"chapters": [
+				{ "id": "events", "title": "Events", "icon": "calendar-clock" },
+				{ "id": "workflows", "title": "Workflows", "icon": "clipboard-flow-outline" },
+				{ "id": "triggers", "title": "Triggers", "icon": "rocket-launch-outline" },
+				{ "id": "limits", "title": "Limits", "icon": "gauge" },
+				{ "id": "actions", "title": "Actions", "icon": "gesture-tap" },
+				{ "id": "channels", "title": "Channels", "icon": "bullhorn-outline" },
+				{ "id": "categories", "title": "Categories", "icon": "folder-open-outline" },
+				{ "id": "tags", "title": "Tags", "icon": "tag-outline" },
+				{ "id": "buckets", "title": "Buckets", "icon": "pail-outline" },
+				{ "id": "secrets", "title": "Secrets", "icon": "shield-lock-outline" }
+			]
+		},
+		{
+			"title": "Operations",
+			"icon": "monitor-dashboard",
+			"chapters": [
+				{ "id": "servers", "title": "Servers", "icon": "router-network" },
+				{ "id": "groups", "title": "Groups", "icon": "server-network" },
+				{ "id": "monitors", "title": "Monitors", "icon": "chart-areaspline" },
+				{ "id": "alerts", "title": "Alerts", "icon": "bell-outline" },
+				{ "id": "snapshots", "title": "Snapshots", "icon": "monitor-screenshot" },
+				{ "id": "tickets", "title": "Tickets", "icon": "text-box-outline" }
+			]
+		},
+		{
+			"title": "Integrations",
+			"icon": "puzzle",
+			"chapters": [
+				{ "id": "plugins", "title": "Plugins", "icon": "power-plug-outline" },
+				{ "id": "marketplace", "title": "Marketplace", "icon": "cart-outline" },
+				{ "id": "webhooks", "title": "Web Hooks", "icon": "webhook" },
+				{ "id": "syshooks", "title": "System Hooks", "icon": "hook" }
+			]
+		},
+		{
+			"title": "API & Data",
+			"icon": "api",
+			"chapters": [
+				{ "id": "api", "title": "REST API", "icon": "api" },
+				{ "id": "data", "title": "Data Structures", "icon": "table" },
+				{ "id": "db", "title": "Database", "icon": "database" }
+			]
+		},
+		{
+			"title": "Identity",
+			"icon": "account-key",
+			"chapters": [
+				{ "id": "users", "title": "Users and Roles", "icon": "account-multiple" },
+				{ "id": "privileges", "title": "Privileges", "icon": "shield-account" },
+				{ "id": "sso", "title": "SSO Setup", "icon": "key-chain" }
+			]
+		},
+		{
+			"title": "Protocols",
+			"icon": "file-code-outline",
+			"chapters": [
+				{ "id": "xyexp", "title": "Expression Format", "icon": "code-braces" },
+				{ "id": "xypdf", "title": "Portable Data Format", "icon": "file-export" },
+				{ "id": "xybk", "title": "Backup Format", "icon": "backup-restore" },
+				{ "id": "xywp", "title": "Wire Protocol", "icon": "lan-connect" }
+			]
+		},
+		{
+			"title": "Developer",
+			"icon": "code-tags",
+			"chapters": [
+				{ "id": "dev", "title": "Development", "icon": "code-tags" },
+				{ "id": "logging", "title": "Logging", "icon": "file-document" },
+				{ "id": "security", "title": "Security", "icon": "security" }
+			]
+		},
+		{
+			"title": "Meta",
+			"icon": "information-outline",
+			"chapters": [
+				{ "id": "readme", "title": "GitHub Project", "icon": "github", "loc": "https://github.com/pixlcore/xyops/blob/main/README.md" },
+				{ "id": "code_of_conduct", "title": "Code of Conduct", "icon": "handshake", "loc": "https://github.com/pixlcore/xyops/blob/main/CODE_OF_CONDUCT.md" },
+				{ "id": "license", "title": "License", "icon": "certificate-outline", "loc": "https://github.com/pixlcore/xyops/blob/main/LICENSE.md" },
+				{ "id": "trademarks", "title": "Trademarks", "icon": "trademark", "loc": "https://github.com/pixlcore/xyops/blob/main/TRADEMARKS.md" },
+				{ "id": "longevity", "title": "Longevity", "icon": "infinity", "loc": "https://github.com/pixlcore/xyops/blob/main/LONGEVITY.md" },
+				{ "id": "governance", "title": "Governance", "icon": "gavel" },
+				{ "id": "colophon", "title": "Colophon", "icon": "bookshelf" },
+				{ "id": "support", "title": "Support", "icon": "lifebuoy" }
+			]
+		}
+	]
+}
