@@ -40,7 +40,6 @@ Page.Docs = class Docs extends Page {
 		// receive raw markdown from server, render it client-side
 		var args = this.args;
 		var title = resp.title;
-		var text = resp.text;
 		var html = '';
 		
 		// figure out what icon we should use
@@ -50,7 +49,7 @@ Page.Docs = class Docs extends Page {
 		// header nav
 		if (args.doc == 'index') {
 			app.setWindowTitle('Documentation');
-			app.setHeaderTitle( '<i class="mdi mdi-file-document-multiple-outline">&nbsp;</i>' + config.name + ' Documentation' );
+			app.setHeaderTitle( '<i class="mdi mdi-file-document-multiple-outline">&nbsp;</i>xyOps Documentation' );
 			app.highlightTab( 'Docs' );
 		}
 		else {
@@ -77,7 +76,6 @@ Page.Docs = class Docs extends Page {
 		html += '<div class="box_content">';
 		html += '<div class="markdown-body doc-body" style="margin-top:0px; margin-bottom:15px;">';
 		
-		// html += marked.parse(text, config.ui.marked_config);
 		html += resp.html;
 		
 		html += '<p class="article_fin"><i class="mdi mdi-console-line"></i></p>';
@@ -186,7 +184,7 @@ Page.Docs = class Docs extends Page {
 				// link to section in specific doc
 				$this.attr('href', href.replace(/^(\w+)\.md\#(\S+)$/, '#Docs/$1/$2'));
 			}
-			else if (href.match(/^\#(\S+)$/) && doc) {
+			else if (href.match(/^\#([\w\-]+)$/) && doc) {
 				// link to section in current doc
 				$this.attr('href', href.replace(/^\#(\S+)$/, '#Docs/' + doc + '/$1') );
 			}
