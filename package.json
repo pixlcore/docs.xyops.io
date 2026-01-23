@@ -1,7 +1,7 @@
 {
 	"name": "docs.xyops.io",
 	"private": true,
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "The xyOps Documentation Website.",
 	"author": "Joseph Huckaby <jhuckaby@pixlcore.com>",
 	"homepage": "https://github.com/pixlcore/docs.xyops.io",
@@ -31,6 +31,7 @@
 		"marked": "4.3.0",
 		"mime": "2.5.2",
 		"pixl-cli": "^1.0.11",
+		"pixl-request": "^2.5.0",
 		"pixl-tools": "^1.0.24",
 		"pixl-xyapp": "^2.1.0",
 		"uglify-js": "3.13.5"
