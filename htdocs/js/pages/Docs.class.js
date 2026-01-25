@@ -56,7 +56,7 @@ Page.Docs = class Docs extends Page {
 			app.setWindowTitle( title );
 			app.setHeaderNav([
 				{ icon: 'file-document-multiple-outline', loc: '#Docs', title: 'Docs' },
-				{ icon: icon, loc: '#Docs/' + args.doc + '/top', title: title }
+				{ icon: icon, title: `<span class="link" onClick="window.scrollTo(0,0)">${title}</span>` }
 			]);
 			app.highlightTab( args.doc );
 		}
@@ -92,6 +92,7 @@ Page.Docs = class Docs extends Page {
 		this.highlightCodeBlocks();
 		this.fixDocumentLinks();
 		this.setupHeaderLinks();
+		this.wrapTables();
 		
 		setTimeout( function() {
 			$('#fe_doc_search').keypress( function(event) {
@@ -132,12 +133,6 @@ Page.Docs = class Docs extends Page {
 				this.div.html( '' );
 				this.loading();
 				app.api.get( 'app/get_doc', args, this.receive_doc.bind(this), this.fullPageError.bind(this) );
-				return;
-			}
-			
-			if (anchor == 'top') {
-				window.scrollTo(0, 0, { behavior: 'smooth' });
-				args.anchor = anchor;
 				return;
 			}
 			
@@ -241,6 +236,17 @@ Page.Docs = class Docs extends Page {
 		var $code = $(elem).closest('pre').find('> code');
 		copyToClipboard( $code.data('raw') );
 		app.showMessage('info', "Code snippet copied to clipboard.");
+	}
+	
+	wrapTables(elem) {
+		// wrap all tables with DIVs with special class, for overflow
+		var self = this;
+		if (!elem) elem = this.div;
+		else if (typeof(elem) == 'string') elem = $(elem);
+		
+		elem.find('div.markdown-body table').each( function() {
+			$(this).wrap('<div class="table"></div>');
+		});
 	}
 	
 	loading() {

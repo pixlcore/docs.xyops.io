@@ -1163,7 +1163,7 @@ div.td_big {
 		margin: 15px;
 	}
 	div.box:first-of-type {
-		margin-top: 5px;
+		margin-top: 10px;
 	}
 	
 	.dialog.inline {
@@ -1199,8 +1199,8 @@ div.td_big {
 	}
 	
 	.doc-body {
-		margin-left: 20px;
-		margin-right: 20px;
+		margin-left: 10px;
+		margin-right: 10px;
 	}
 	
 }
