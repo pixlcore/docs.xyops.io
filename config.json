@@ -129,6 +129,7 @@
 			"title": "Developer",
 			"icon": "code-tags",
 			"chapters": [
+				{ "id": "contrib", "title": "Contributing", "icon": "hand-heart", "loc": "https://github.com/pixlcore/xyops/blob/main/CONTRIBUTING.md" },
 				{ "id": "dev", "title": "Development", "icon": "code-tags" },
 				{ "id": "logging", "title": "Logging", "icon": "file-document" },
 				{ "id": "security", "title": "Security", "icon": "security" }
