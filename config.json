@@ -144,9 +144,17 @@
 				{ "id": "license", "title": "License", "icon": "certificate-outline", "loc": "https://github.com/pixlcore/xyops/blob/main/LICENSE.md" },
 				{ "id": "trademarks", "title": "Trademarks", "icon": "trademark", "loc": "https://github.com/pixlcore/xyops/blob/main/TRADEMARKS.md" },
 				{ "id": "longevity", "title": "Longevity", "icon": "infinity", "loc": "https://github.com/pixlcore/xyops/blob/main/LONGEVITY.md" },
-				{ "id": "governance", "title": "Governance", "icon": "gavel" },
+				{ "id": "governance", "title": "Governance", "icon": "domain" },
 				{ "id": "colophon", "title": "Colophon", "icon": "bookshelf" },
 				{ "id": "support", "title": "Support", "icon": "lifebuoy" }
+			]
+		},
+		{
+			"title": "Legal",
+			"icon": "gavel",
+			"chapters": [
+				{ "id": "terms", "title": "Terms of Service", "icon": "notebook-outline" },
+				{ "id": "privacy", "title": "Privacy Policy", "icon": "book-account-outline" }
 			]
 		}
 	]
