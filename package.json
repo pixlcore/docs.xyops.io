@@ -1,7 +1,7 @@
 {
 	"name": "docs.xyops.io",
 	"private": true,
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "The xyOps Documentation Website.",
 	"author": "Joseph Huckaby <jhuckaby@pixlcore.com>",
 	"homepage": "https://github.com/pixlcore/docs.xyops.io",
