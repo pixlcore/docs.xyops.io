@@ -113,7 +113,8 @@
 			"chapters": [
 				{ "id": "users", "title": "Users and Roles", "icon": "account-multiple" },
 				{ "id": "privileges", "title": "Privileges", "icon": "shield-account" },
-				{ "id": "sso", "title": "SSO Setup", "icon": "key-chain" }
+				{ "id": "sso", "title": "SSO Setup", "icon": "key-chain" },
+				{ "id": "tailscale", "title": "Tailscale", "icon": "dots-grid" }
 			]
 		},
 		{
