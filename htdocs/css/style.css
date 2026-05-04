@@ -369,7 +369,7 @@ div.detail_title.expanded {
 	padding: 0;
 }
 
-.markdown-body p code, .markdown-body td code, .markdown-body li code {
+.markdown-body p code, .markdown-body td code, .markdown-body li code, .blocknote code {
 	font-family: var(--font-family-monospace);
 	background-color: var(--form-background-color);
 	border: 1px solid var(--border-color);
