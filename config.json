@@ -53,6 +53,7 @@
 				{ "id": "welcome", "title": "Welcome!", "icon": "hand-wave" },
 				{ "id": "hosting", "title": "Self-Hosting", "icon": "server-network" },
 				{ "id": "config", "title": "Configuration", "icon": "cog" },
+				{ "id": "ui", "title": "User Interface", "icon": "remote-desktop" },
 				{ "id": "storage", "title": "Storage Setup", "icon": "floppy" },
 				{ "id": "scaling", "title": "Scaling", "icon": "chart-line" },
 				{ "id": "cli", "title": "Command Line", "icon": "console" },
