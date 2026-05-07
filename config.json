@@ -47,10 +47,11 @@
 	
 	"sections": [
 		{
-			"title": "Getting Started",
+			"title": "Start Here",
 			"icon": "rocket-launch",
 			"chapters": [
 				{ "id": "welcome", "title": "Welcome!", "icon": "hand-wave" },
+				{ "id": "start", "title": "Getting Started", "icon": "map-marker-radius" },
 				{ "id": "hosting", "title": "Self-Hosting", "icon": "server-network" },
 				{ "id": "config", "title": "Configuration", "icon": "cog" },
 				{ "id": "ui", "title": "User Interface", "icon": "remote-desktop" },
