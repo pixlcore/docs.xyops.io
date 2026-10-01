@@ -92,10 +92,10 @@
 		},
 		{
 			"title": "Integrations",
-			"icon": "puzzle",
+			"icon": "connection",
 			"chapters": [
 				{ "id": "plugins", "title": "Plugins", "icon": "power-plug-outline" },
-				{ "id": "extensions", "title": "Extensions", "icon": "puzzle-outline" },
+				{ "id": "ext", "title": "Extensions", "icon": "puzzle-outline" },
 				{ "id": "marketplace", "title": "Marketplace", "icon": "cart-outline" },
 				{ "id": "webhooks", "title": "Web Hooks", "icon": "webhook" },
 				{ "id": "syshooks", "title": "System Hooks", "icon": "hook" }
